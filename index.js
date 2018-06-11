@@ -1,8 +1,11 @@
 var katzDeli = [];
 
-function takeANumber(katzDeliLine, name){
-  katzDeliLine.push(name);
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
+let num = 0;
+
+function takeANumber(katzDeliLine){
+  num++ 
+  katzDeliLine.push(num);
+  return `Welcome, ${num}. You are number ${katzDeliLine.length} in line.`;
 }
 
 
@@ -20,7 +23,7 @@ function currentLine(line){
   if(line.length > 0){
     let nameAndLine = []
     for(let i = 0; i < line.length; i++){
-      nameAndLine.push( ` ${i + 1}. ${line[i]}` )
+      nameAndLine.push( ` ${line[i]}.` )
     }
     return `The line is currently:${nameAndLine}`
   }
